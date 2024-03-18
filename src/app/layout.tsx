@@ -18,7 +18,9 @@ type RootLayoutProps = Readonly<{
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-dvh bg-stone-100`}>
+      <body
+        className={`${inter.className} min-h-dvh bg-stone-100 text-stone-800`}
+      >
         <header className="sticky top-0 z-50">
           <Nav />
         </header>
