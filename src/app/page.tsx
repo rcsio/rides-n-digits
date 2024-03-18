@@ -3,6 +3,8 @@ import Input from "@/components/input";
 import Product from "@/components/product";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const api = `${process.env.NEXT_PUBLIC_API}/products?category=`;
   const categories = ["Car", "Motorcycle", "Boat", "Airplane"];
@@ -14,10 +16,10 @@ export default async function Home() {
   const data = await Promise.all(responses.map((res) => res.json()));
 
   return (
-    <>
+    <div className="py-4">
       <h1 className="sr-only">Rides &apos;n&apos; Digits</h1>
 
-      <div className="mx-4 mt-4">
+      <div className="mx-4">
         <Input
           placeholder="Search for cars, motorcycles, airplanes, bicycles, boats, etc."
           srLabel
@@ -35,7 +37,7 @@ export default async function Home() {
           ))}
         </ul>
       </section>
-    </>
+    </div>
   );
 }
 
