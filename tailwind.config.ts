@@ -7,5 +7,12 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   plugins: [require("@tailwindcss/forms")],
+  theme: {
+    extend: {
+      aspectRatio: {
+        card: "1.5857",
+      },
+    },
+  },
 };
 export default config;
