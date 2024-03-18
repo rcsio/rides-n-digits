@@ -2,7 +2,7 @@ import Image from "next/image";
 
 type Props = {
   name: string;
-  price: number;
+  price: string;
   img: string;
   imgAlt?: string;
 };
