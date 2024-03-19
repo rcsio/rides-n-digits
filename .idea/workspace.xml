@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Change ridesndigits to rides-n-digits">
-      <change afterPath="$PROJECT_DIR$/.idea/rides-n-digits.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto">
+      <change afterPath="$PROJECT_DIR$/src/app/ads/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/products/[id]/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/new/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/embla-carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/embla-carousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/products/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/products/route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/poste/dev/rides-n-digits/public/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,6 +61,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\poste\dev\rides-n-digits\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\poste\dev\rides-n-digits\src\app\ads\[id]" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -99,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710828765152</updated>
-      <workItem from="1710828769464" duration="1952000" />
+      <workItem from="1710828769464" duration="16339000" />
     </task>
     <task id="LOCAL-00001" summary="Change ridesndigits to rides-n-digits">
       <option name="closed" value="true" />
@@ -109,7 +111,111 @@
       <option name="project" value="LOCAL" />
       <updated>1710829306758</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rename components to ui">
+      <option name="closed" value="true" />
+      <created>1710830856638</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710830856638</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Rename components to ui">
+      <option name="closed" value="true" />
+      <created>1710830903987</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710830903987</updated>
+    </task>
+    <task id="LOCAL-00004" summary="New UI: Input">
+      <option name="closed" value="true" />
+      <created>1710830961882</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710830961882</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix home page: Input not found">
+      <option name="closed" value="true" />
+      <created>1710831006943</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710831006943</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update ide files">
+      <option name="closed" value="true" />
+      <created>1710831037969</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710831037969</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Move the logo to public folder">
+      <option name="closed" value="true" />
+      <created>1710832181412</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710832181412</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Install title and @types/title">
+      <option name="closed" value="true" />
+      <created>1710845300869</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710845300869</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Expose embla options">
+      <option name="closed" value="true" />
+      <created>1710845348300</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710845348300</updated>
+    </task>
+    <task id="LOCAL-00010" summary="New component class: button">
+      <option name="closed" value="true" />
+      <created>1710845398415</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710845398415</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Apply button class into nav">
+      <option name="closed" value="true" />
+      <created>1710845449283</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710845449283</updated>
+    </task>
+    <task id="LOCAL-00012" summary="New hack: scroll to top">
+      <option name="closed" value="true" />
+      <created>1710845477693</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710845477693</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Remove focus:bg-amber-50">
+      <option name="closed" value="true" />
+      <created>1710845525504</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710845525504</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto">
+      <option name="closed" value="true" />
+      <created>1710845919533</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1710845919533</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +223,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change ridesndigits to rides-n-digits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change ridesndigits to rides-n-digits" />
+    <MESSAGE value="Rename components to ui" />
+    <MESSAGE value="New UI: Input" />
+    <MESSAGE value="Fix home page: Input not found" />
+    <MESSAGE value="Update ide files" />
+    <MESSAGE value="Move the logo to public folder" />
+    <MESSAGE value="Install title and @types/title" />
+    <MESSAGE value="Expose embla options" />
+    <MESSAGE value="New component class: button" />
+    <MESSAGE value="Apply button class into nav" />
+    <MESSAGE value="New hack: scroll to top" />
+    <MESSAGE value="Remove focus:bg-amber-50" />
+    <MESSAGE value="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
