@@ -9,19 +9,19 @@ export async function GET(request: NextRequest) {
   return Response.json([
     {
       id: randomUUID(),
-      name: faker.commerce.product(),
+      name: faker.vehicle.vehicle(),
       price: faker.commerce.price(),
       img: `https://source.unsplash.com/random/?${category}`,
     },
     {
       id: randomUUID(),
-      name: faker.commerce.product(),
+      name: faker.vehicle.vehicle(),
       price: faker.commerce.price(),
       img: `https://source.unsplash.com/random/?${category}`,
     },
     {
       id: randomUUID(),
-      name: faker.commerce.product(),
+      name: faker.vehicle.vehicle(),
       price: faker.commerce.price(),
       img: `https://source.unsplash.com/random/?${category}`,
     },
