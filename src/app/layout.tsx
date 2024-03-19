@@ -1,4 +1,4 @@
-import Nav from "@/components/nav";
+import Nav from "@/ui/nav";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";

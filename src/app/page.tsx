@@ -1,6 +1,6 @@
-import EmblaCarousel from "@/components/embla-carousel";
-import Input from "@/components/input";
-import Product from "@/components/product";
+import EmblaCarousel from "@/ui/embla-carousel";
+import Input from "@/ui/input";
+import Product from "@/ui/product";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
