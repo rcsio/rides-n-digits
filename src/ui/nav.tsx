@@ -15,10 +15,7 @@ export default function Nav() {
         </li>
         <div className="flex items-center gap-x-2">
           <li>
-            <Link
-              href="/new"
-              className="inline-flex min-h-10 items-center rounded-full bg-orange-500 px-4 font-bold text-white"
-            >
+            <Link href="/new" className="button bg-orange-500 text-white">
               Place Ad
             </Link>
           </li>
