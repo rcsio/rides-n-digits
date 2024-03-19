@@ -65,7 +65,7 @@ function Category({ name, products }: CategoryProps) {
         <ul className="flex gap-x-4">
           {products.map(({ id, name, price, img }) => (
             <li key={id} className="w-3/4 shrink-0">
-              <Link href={`/ads/${id}`} className="focus:bg-amber-50">
+              <Link href={`/ads/${id}`}>
                 <Product name={name} price={`${currency} ${price}`} img={img} />
               </Link>
             </li>
