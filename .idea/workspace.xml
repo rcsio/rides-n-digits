@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto">
+    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Mockup route for getting a product">
       <change afterPath="$PROJECT_DIR$/src/app/ads/[id]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/products/[id]/route.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app/new/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/products/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/products/route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710828765152</updated>
-      <workItem from="1710828769464" duration="16339000" />
+      <workItem from="1710828769464" duration="23978000" />
     </task>
     <task id="LOCAL-00001" summary="Change ridesndigits to rides-n-digits">
       <option name="closed" value="true" />
@@ -215,7 +211,39 @@
       <option name="project" value="LOCAL" />
       <updated>1710845919533</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update ide files">
+      <option name="closed" value="true" />
+      <created>1710846066964</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1710846066964</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Use vehicle method of faker to generate product name">
+      <option name="closed" value="true" />
+      <created>1710846165681</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1710846165682</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add optional dots prop to embla carousel">
+      <option name="closed" value="true" />
+      <created>1710855657352</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1710855657352</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Mockup route for getting a product">
+      <option name="closed" value="true" />
+      <created>1710855882626</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1710855882626</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +254,6 @@
     <MESSAGE value="Rename components to ui" />
     <MESSAGE value="New UI: Input" />
     <MESSAGE value="Fix home page: Input not found" />
-    <MESSAGE value="Update ide files" />
     <MESSAGE value="Move the logo to public folder" />
     <MESSAGE value="Install title and @types/title" />
     <MESSAGE value="Expose embla options" />
@@ -235,7 +262,11 @@
     <MESSAGE value="New hack: scroll to top" />
     <MESSAGE value="Remove focus:bg-amber-50" />
     <MESSAGE value="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto" />
+    <MESSAGE value="Update ide files" />
+    <MESSAGE value="Use vehicle method of faker to generate product name" />
+    <MESSAGE value="Add optional dots prop to embla carousel" />
+    <MESSAGE value="Mockup route for getting a product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mockup route for getting a product" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
