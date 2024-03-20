@@ -1,13 +1,18 @@
 import clsx from "clsx";
+import { InputHTMLAttributes } from "react";
 
-type Props = {
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
-  placeholder?: string;
   srLabel?: boolean;
-  type: "email" | "password" | "text" | "search";
-};
+}
 
-export default function Input({ label, placeholder, srLabel, type }: Props) {
+export default function Input({
+  label,
+  placeholder,
+  srLabel,
+  type,
+  ...rest
+}: Props) {
   return (
     <label className="grid gap-y-1">
       <span
@@ -21,6 +26,7 @@ export default function Input({ label, placeholder, srLabel, type }: Props) {
         type={type}
         className="rounded-full border border-stone-200 placeholder-stone-300"
         placeholder={placeholder}
+        {...rest}
       />
     </label>
   );
