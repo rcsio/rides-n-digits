@@ -14,9 +14,9 @@ export default function Input({
   ...rest
 }: Props) {
   return (
-    <label className="grid gap-y-1">
+    <label className="grid gap-y-2">
       <span
-        className={clsx("font-bold leading-none", {
+        className={clsx("select-none font-bold leading-none", {
           "sr-only": srLabel,
         })}
       >
