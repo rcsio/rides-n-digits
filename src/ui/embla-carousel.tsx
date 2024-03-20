@@ -28,21 +28,26 @@ export default function EmblaCarousel({
   }, [emblaApi]);
 
   return (
-    <div className={`overflow-hidden ${className}`} ref={emblaRef}>
+    <div
+      className={clsx("relative overflow-hidden", {
+        [`${className}`]: className,
+      })}
+      ref={emblaRef}
+    >
       {children}
 
       {dots && dots > 0 && (
-        <div className="mt-2 flex justify-center gap-x-2">
+        <div className="absolute bottom-2 flex w-full justify-center gap-x-2">
           {[...Array(dots)].map((_, i) => (
             <div
               key={i}
               className={clsx(
-                "aspect-square w-2 rounded-full",
+                "aspect-square w-2 rounded-full shadow",
                 {
-                  "border border-stone-800": i !== pos,
+                  "border border-white": i !== pos,
                 },
                 {
-                  "bg-stone-800": i === pos,
+                  "bg-white": i === pos,
                 },
               )}
             />
