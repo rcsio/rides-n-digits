@@ -53,11 +53,11 @@ export default async function Ad({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      <EmblaCarousel dots={data.images.length}>
-        <ul className="flex gap-x-2">
+      <EmblaCarousel dots={data.images.length} options={{ loop: true }}>
+        <ul className="flex">
           {data.images.map((img: string, i: number) => (
             <li key={i} className="w-full shrink-0">
-              <Link href={`/images/${img}`}>
+              <Link href={img} target="_blank">
                 <div className="relative block aspect-card">
                   <Image
                     src={img}
