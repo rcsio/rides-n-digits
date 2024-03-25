@@ -1,33 +1,25 @@
 import clsx from "clsx";
+import { nanoid } from "nanoid";
 import { InputHTMLAttributes } from "react";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
+  name: string;
   srLabel?: boolean;
 }
 
-export default function Input({
-  label,
-  placeholder,
-  srLabel,
-  type,
-  ...rest
-}: Props) {
+export default function Input({ id, label, srLabel, ...rest }: Props) {
+  const _id = id || nanoid();
+
   return (
-    <label className="grid gap-y-2">
-      <span
-        className={clsx("select-none font-bold leading-none", {
-          "sr-only": srLabel,
-        })}
+    <div className="grid gap-y-1">
+      <label
+        htmlFor={_id}
+        className={clsx("justify-self-start", { "sr-only": srLabel })}
       >
         {label}
-      </span>
-      <input
-        type={type}
-        className="rounded-full border border-stone-200 placeholder-stone-300"
-        placeholder={placeholder}
-        {...rest}
-      />
-    </label>
+      </label>
+      <input {...rest} className="input" id={_id} />
+    </div>
   );
 }
