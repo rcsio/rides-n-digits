@@ -43,13 +43,14 @@ export default function Photos() {
       ))}
 
       {files.length < MAX_PHOTOS && (
-        <label className="button w-full cursor-pointer border border-blue-500 bg-white">
+        <label className="button w-full cursor-pointer border border-blue-500 bg-white hover:bg-blue-100 has-[:focus]:bg-blue-100">
           <input
             type="file"
             accept=".jpg, .jpeg"
             name="photos"
             multiple
             className="sr-only"
+            tabIndex={6}
             onChange={handleChange}
           />
           {files.length > 0 ? "Add more photos" : "Choose photos"}
