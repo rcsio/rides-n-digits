@@ -1,17 +1,9 @@
 import ScrollToTop from "@/hack/scroll-to-top";
+import { Product } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
 import Image from "next/image";
 import Link from "next/link";
 import title from "title";
-
-type Product = {
-  attributes: { [key: string]: string };
-  description: string;
-  images: string[];
-  name: string;
-  price: number;
-  user: string;
-};
 
 export default async function Ad({ params }: { params: { id: string } }) {
   const url = `${process.env.NEXT_PUBLIC_API}/products/${params.id}`;
