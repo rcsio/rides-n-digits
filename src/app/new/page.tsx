@@ -1,3 +1,4 @@
+import Checkbox from "@/ui/checkbox";
 import Input from "@/ui/input";
 import Textarea from "@/ui/textarea";
 
@@ -6,21 +7,24 @@ import Photos from "./ui/photos";
 export default function Advertise() {
   return (
     <form className="space-y-6 px-4 py-6">
-      <h1 className="text-xl font-bold leading-none">Place Ad</h1>
+      <h1 className="text-xl font-bold">Place Ad</h1>
 
-      <label className="grid gap-y-2">
-        <span className="select-none font-bold leading-none">Category</span>
-        <select name="" className="input" tabIndex={1}>
+      <div className="grid gap-y-1">
+        <label htmlFor="category" className="justify-self-start">
+          Category
+        </label>
+        <select name="category" id="category" className="input" tabIndex={1}>
           <option value="">Car</option>
           <option value="">Motorcycle</option>
           <option value="">Airplane</option>
         </select>
-      </label>
+      </div>
 
-      <Input label="Name" required spellCheck tabIndex={2} />
+      <Input label="Name" name="name" required spellCheck tabIndex={2} />
 
       <Textarea
         label="Description"
+        name="description"
         maxLength={1000}
         rows={5}
         spellCheck
@@ -28,18 +32,18 @@ export default function Advertise() {
         required
       />
 
-      <Input label="Price" type="number" min={1} required tabIndex={4} />
+      <Input
+        label="Price"
+        name="price"
+        type="number"
+        min={1}
+        required
+        tabIndex={4}
+      />
 
-      <label className="mt-4 flex w-fit items-center gap-x-2">
-        <span className="order-2 select-none font-bold leading-none">
-          Accept price offers
-        </span>
-        <input
-          type="checkbox"
-          className="order-1 rounded border border-stone-400"
-          tabIndex={5}
-        />
-      </label>
+      <Checkbox name="price-offers" tabIndex={5}>
+        I want to receive price offers
+      </Checkbox>
 
       <Photos />
 
