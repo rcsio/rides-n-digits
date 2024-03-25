@@ -22,6 +22,7 @@ export default async function Home() {
       <div className="mx-4">
         <Input
           label="Search"
+          name="search"
           placeholder="Search for cars, motorcycles, airplanes, bicycles, boats, etc."
           srLabel
           type="search"

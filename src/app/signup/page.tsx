@@ -10,8 +10,14 @@ export default function Signup() {
       </h1>
 
       <form action="" className="mt-12 grid gap-y-6">
-        <Input label="Email" type="email" required tabIndex={1} />
-        <Input label="Password" type="password" required tabIndex={2} />
+        <Input label="Email" name="email" type="email" required tabIndex={1} />
+        <Input
+          label="Password"
+          name="password"
+          type="password"
+          required
+          tabIndex={2}
+        />
 
         <button
           className="button bg-orange-500 font-bold text-white"

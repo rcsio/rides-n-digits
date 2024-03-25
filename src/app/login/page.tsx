@@ -10,10 +10,16 @@ export default function Login() {
       </h1>
 
       <form action="" className="mt-12 grid gap-y-6">
-        <Input label="Email" type="email" required tabIndex={1} />
+        <Input label="Email" name="email" type="email" required tabIndex={1} />
 
         <div className="relative">
-          <Input label="Password" type="password" required tabIndex={2} />
+          <Input
+            label="Password"
+            name="password"
+            type="password"
+            required
+            tabIndex={2}
+          />
           <p className="absolute right-0 top-0 leading-none">
             <Link href="/forgot-password" tabIndex={4} className="underline">
               Forgot<span className="sr-only"> password</span>?
