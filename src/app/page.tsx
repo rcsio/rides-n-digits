@@ -17,17 +17,17 @@ export default async function Home() {
 
   return (
     <div className="py-4">
-      <h1 className="sr-only">Rides &apos;n&apos; Digits</h1>
+      <h1 className="sr-only">Trending</h1>
 
-      <div className="mx-4">
+      <form action="/search" className="mx-4">
         <Input
           label="Search"
-          name="search"
+          name="q"
           placeholder="Search for cars, motorcycles, airplanes, bicycles, boats, etc."
           srLabel
           type="search"
         />
-      </div>
+      </form>
 
       <section>
         <h2 className="sr-only">Categories</h2>
