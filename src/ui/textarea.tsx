@@ -1,33 +1,25 @@
 import clsx from "clsx";
+import { nanoid } from "nanoid";
 import { TextareaHTMLAttributes } from "react";
 
 interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-  className?: string;
   label: string;
+  name: string;
   srLabel?: boolean;
 }
 
-export default function Textarea({
-  className,
-  label,
-  srLabel,
-  ...rest
-}: Props) {
+export default function Textarea({ id, label, srLabel, ...rest }: Props) {
+  const _id = id || nanoid();
+
   return (
-    <label className="grid gap-y-2">
-      <span
-        className={clsx("select-none font-bold leading-none", {
-          "sr-only": srLabel,
-        })}
+    <div className="grid gap-y-1">
+      <label
+        htmlFor={_id}
+        className={clsx("justify-self-start", { "sr-only": srLabel })}
       >
         {label}
-      </span>
-      <textarea
-        {...rest}
-        className={clsx("rounded-xl border border-stone-200", {
-          [`${className}`]: className,
-        })}
-      />
-    </label>
+      </label>
+      <textarea {...rest} id={_id}></textarea>
+    </div>
   );
 }
