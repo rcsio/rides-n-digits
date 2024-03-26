@@ -1,20 +1,27 @@
+import { Product as ProductType } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
 import Input from "@/ui/input";
 import Product from "@/ui/product";
 import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
+import pluralize from "pluralize";
+import title from "title";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const api = `${process.env.NEXT_PUBLIC_API}/products?category=`;
-  const categories = ["Car", "Motorcycle", "Boat", "Airplane"];
+  const api = `${process.env.NEXT_PUBLIC_API}`;
 
-  const responses = await Promise.all(
-    categories.map((category) => fetch(`${api}${category}`)),
+  const categoriesRes = await fetch(`${api}/categories`);
+  const categories: string[] = await categoriesRes.json();
+
+  const productsRes = await Promise.all(
+    categories.map((c) => fetch(`${api}/products?category=${c}`)),
   );
 
-  const data = await Promise.all(responses.map((res) => res.json()));
+  const products: ProductType[][] = await Promise.all(
+    productsRes.map((res) => res.json()),
+  );
 
   return (
     <div className="py-4">
@@ -33,10 +40,10 @@ export default async function Home() {
       <section>
         <h2 className="sr-only">Categories</h2>
 
-        <ul className="mt-8 grid gap-y-8">
+        <ul className="mt-8">
           {categories.map((category, i) => (
-            <li key={i}>
-              <Category name={category} products={data[i]} />
+            <li key={i} className="mt-8">
+              <Category name={category} products={products[i]} />
             </li>
           ))}
         </ul>
@@ -45,16 +52,9 @@ export default async function Home() {
   );
 }
 
-type Product = {
-  id: string;
-  name: string;
-  price: number;
-  img: string;
-};
-
 type CategoryProps = {
   name: string;
-  products: Product[];
+  products: ProductType[];
 };
 
 function Category({ name, products }: CategoryProps) {
@@ -63,7 +63,9 @@ function Category({ name, products }: CategoryProps) {
   return (
     <>
       <div className="mx-4 flex items-center justify-between">
-        <div className="text-xl font-bold leading-none">{name}</div>
+        <div className="text-xl font-bold leading-none">
+          {title(pluralize(name))}
+        </div>
         <Link
           href={`/categories/${name}`}
           className="flex items-center gap-x-2"
@@ -74,10 +76,14 @@ function Category({ name, products }: CategoryProps) {
       </div>
       <EmblaCarousel className="mt-4 px-4">
         <ul className="flex gap-x-4">
-          {products.map(({ id, name, price, img }) => (
-            <li key={id} className="w-3/4 shrink-0">
+          {products.map(({ id, name, price, images }) => (
+            <li key={id} className="shrink-0 basis-11/12">
               <Link href={`/ads/${id}`}>
-                <Product name={name} price={`${currency} ${price}`} img={img} />
+                <Product
+                  name={name}
+                  price={`${currency} ${price}`}
+                  img={images[0]}
+                />
               </Link>
             </li>
           ))}
