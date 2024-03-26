@@ -12,6 +12,7 @@ const config: Config = {
     extend: {
       aspectRatio: {
         card: "1.5857",
+        "4/3": "4 / 3",
       },
     },
   },
