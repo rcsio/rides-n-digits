@@ -52,7 +52,7 @@ export default async function Search({ searchParams }: Props) {
 function Product({ data }: { data: Product }) {
   return (
     <div className="flex flex-col-reverse">
-      <dl className="border border-b-stone-200 bg-white px-4 py-2">
+      <dl className="border-b border-b-stone-200 bg-white px-4 py-2">
         <dt className="sr-only">Name</dt>
         <dd className="font-bold">{data.name}</dd>
 
