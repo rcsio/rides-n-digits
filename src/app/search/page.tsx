@@ -67,7 +67,7 @@ function Product({ data }: { data: Product }) {
         <ul className="flex">
           {data.images.map((img: string, i: number) => (
             <li key={i} className="w-full shrink-0">
-              <Link href={img} target="_blank">
+              <Link href={`/ads/${data.id}`}>
                 <div className="relative block aspect-card">
                   <Image
                     src={img}
