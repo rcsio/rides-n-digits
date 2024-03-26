@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Mockup route for getting a product">
-      <change afterPath="$PROJECT_DIR$/src/app/ads/[id]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/new/page.tsx" afterDir="false" />
+    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Apply getProduct helper function in all mockup routes">
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,39 +29,40 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\laragon\bin\php\php-8.1.16-nts-Win32-vs16-x64\php.exe" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2dtYIkb1jSEQmPmU6bWM6IKgUAe" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/poste/dev/rides-n-digits/public/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\poste\\dev\\rides-n-digits\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Users\\poste\\dev\\rides-n-digits\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/poste/dev/rides-n-digits/public/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\poste\\dev\\rides-n-digits\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\poste\\dev\\rides-n-digits\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\poste\dev\rides-n-digits\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\poste\dev\rides-n-digits\src\app\login" />
       <recent name="C:\Users\poste\dev\rides-n-digits\src\app\ads\[id]" />
     </key>
   </component>
@@ -85,7 +86,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14808.18" />
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.15026.12" />
       </set>
     </attachedChunks>
   </component>
@@ -97,39 +98,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710828765152</updated>
-      <workItem from="1710828769464" duration="23978000" />
-    </task>
-    <task id="LOCAL-00001" summary="Change ridesndigits to rides-n-digits">
-      <option name="closed" value="true" />
-      <created>1710829306758</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1710829306758</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Rename components to ui">
-      <option name="closed" value="true" />
-      <created>1710830856638</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1710830856638</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Rename components to ui">
-      <option name="closed" value="true" />
-      <created>1710830903987</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1710830903987</updated>
-    </task>
-    <task id="LOCAL-00004" summary="New UI: Input">
-      <option name="closed" value="true" />
-      <created>1710830961882</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1710830961882</updated>
+      <workItem from="1710828769464" duration="24348000" />
+      <workItem from="1710911754829" duration="19437000" />
+      <workItem from="1710940238927" duration="959000" />
+      <workItem from="1711259905570" duration="21025000" />
+      <workItem from="1711347846682" duration="99000" />
+      <workItem from="1711347973590" duration="16138000" />
+      <workItem from="1711431536445" duration="22255000" />
     </task>
     <task id="LOCAL-00005" summary="Fix home page: Input not found">
       <option name="closed" value="true" />
@@ -243,30 +218,330 @@
       <option name="project" value="LOCAL" />
       <updated>1710855882626</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Initial commit for product (ad) page">
+      <option name="closed" value="true" />
+      <created>1710855987667</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1710855987667</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Update ide file">
+      <option name="closed" value="true" />
+      <created>1710856005857</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1710856005857</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Set NEXT_PUBLIC_API to 127.0.0.1">
+      <option name="closed" value="true" />
+      <created>1710913862074</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1710913862074</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Mention the default Next.js port number in the README file">
+      <option name="closed" value="true" />
+      <created>1710913957623</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1710913957623</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Loop the carousel in the product page and fix image link">
+      <option name="closed" value="true" />
+      <created>1710914219382</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1710914219382</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Update embla carousel&#10;&#10;- Move the dots on top of slide&#10;- Change the dots color to white">
+      <option name="closed" value="true" />
+      <created>1710915304401</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1710915304401</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Update input to extend the native input element">
+      <option name="closed" value="true" />
+      <created>1710920697139</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1710920697139</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Add signup and login pages">
+      <option name="closed" value="true" />
+      <created>1710920815332</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1710920815332</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Update input&#10;&#10;- Increase the gap between the text label and the input&#10;- Non-selectable text label">
+      <option name="closed" value="true" />
+      <created>1710940426167</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1710940426167</updated>
+    </task>
+    <task id="LOCAL-00028" summary="New UI: Textarea">
+      <option name="closed" value="true" />
+      <created>1711277394957</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1711277394957</updated>
+    </task>
+    <task id="LOCAL-00029" summary="New component class: input&#10;&#10;Useful for select element">
+      <option name="closed" value="true" />
+      <created>1711277516679</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1711277516679</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add page for placing ads">
+      <option name="closed" value="true" />
+      <created>1711283669165</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1711283669165</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Default styles">
+      <option name="closed" value="true" />
+      <created>1711361931841</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1711361931841</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Require name prop in input ui">
+      <option name="closed" value="true" />
+      <created>1711361970773</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1711361970773</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Update photos ui&#10;&#10;- style file input on hover and on focus&#10;- set tabIndex">
+      <option name="closed" value="true" />
+      <created>1711362075653</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1711362075653</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Install nanoid">
+      <option name="closed" value="true" />
+      <created>1711364031748</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1711364031748</updated>
+    </task>
+    <task id="LOCAL-00035" summary="New UI: Checkbox">
+      <option name="closed" value="true" />
+      <created>1711364128101</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1711364128101</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Require name prop in the textarea ui">
+      <option name="closed" value="true" />
+      <created>1711364203460</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1711364203460</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Updates for the placing new ad page&#10;&#10;- Remove leading-none and select-none&#10;- Use checkbox ui&#10;- Pass names">
+      <option name="closed" value="true" />
+      <created>1711364646661</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1711364646661</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Pass value to name prop input">
+      <option name="closed" value="true" />
+      <created>1711365279339</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1711365279339</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Move the type Product to types.ts file">
+      <option name="closed" value="true" />
+      <created>1711365847153</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1711365847153</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Install dayjs">
+      <option name="closed" value="true" />
+      <created>1711371970866</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1711371970866</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Add id and create_at to type Product">
+      <option name="closed" value="true" />
+      <created>1711371995717</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1711371995717</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Add mock route for searching product">
+      <option name="closed" value="true" />
+      <created>1711372046876</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1711372046876</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Initial commit for search feature">
+      <option name="closed" value="true" />
+      <created>1711372078197</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1711372078197</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Only apply border bottom">
+      <option name="closed" value="true" />
+      <created>1711432925628</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1711432925628</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Fix product link in search result">
+      <option name="closed" value="true" />
+      <created>1711434251843</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1711434251843</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Add a link to see all ads in a category">
+      <option name="closed" value="true" />
+      <created>1711438938533</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1711438938533</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Install pluralize">
+      <option name="closed" value="true" />
+      <created>1711440712359</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1711440712359</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Mockup api route for getting categories">
+      <option name="closed" value="true" />
+      <created>1711440856122</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1711440856122</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Add placehold.co as trusted image source">
+      <option name="closed" value="true" />
+      <created>1711457827194</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1711457827194</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Add 4/3 aspect ratio">
+      <option name="closed" value="true" />
+      <created>1711457840642</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1711457840642</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Add getProduct helper function to generate a fake product">
+      <option name="closed" value="true" />
+      <created>1711457917840</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1711457917840</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Update product item in the home page&#10;&#10;- Change aspect ratio to video&#10;- Add sizes prop to image element">
+      <option name="closed" value="true" />
+      <created>1711458354520</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1711458354520</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Apply getProduct helper function in all mockup routes">
+      <option name="closed" value="true" />
+      <created>1711458522702</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1711458522702</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change ridesndigits to rides-n-digits" />
-    <MESSAGE value="Rename components to ui" />
-    <MESSAGE value="New UI: Input" />
-    <MESSAGE value="Fix home page: Input not found" />
-    <MESSAGE value="Move the logo to public folder" />
-    <MESSAGE value="Install title and @types/title" />
-    <MESSAGE value="Expose embla options" />
-    <MESSAGE value="New component class: button" />
-    <MESSAGE value="Apply button class into nav" />
-    <MESSAGE value="New hack: scroll to top" />
-    <MESSAGE value="Remove focus:bg-amber-50" />
-    <MESSAGE value="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto" />
-    <MESSAGE value="Update ide files" />
-    <MESSAGE value="Use vehicle method of faker to generate product name" />
-    <MESSAGE value="Add optional dots prop to embla carousel" />
-    <MESSAGE value="Mockup route for getting a product" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mockup route for getting a product" />
+    <MESSAGE value="New component class: input&#10;&#10;Useful for select element" />
+    <MESSAGE value="Add page for placing ads" />
+    <MESSAGE value="Default styles" />
+    <MESSAGE value="Require name prop in input ui" />
+    <MESSAGE value="Update photos ui&#10;&#10;- style file input on hover and on focus&#10;- set tabIndex" />
+    <MESSAGE value="Install nanoid" />
+    <MESSAGE value="New UI: Checkbox" />
+    <MESSAGE value="Require name prop in the textarea ui" />
+    <MESSAGE value="Updates for the placing new ad page&#10;&#10;- Remove leading-none and select-none&#10;- Use checkbox ui&#10;- Pass names" />
+    <MESSAGE value="Pass value to name prop input" />
+    <MESSAGE value="Move the type Product to types.ts file" />
+    <MESSAGE value="Install dayjs" />
+    <MESSAGE value="Add id and create_at to type Product" />
+    <MESSAGE value="Add mock route for searching product" />
+    <MESSAGE value="Initial commit for search feature" />
+    <MESSAGE value="Only apply border bottom" />
+    <MESSAGE value="Fix product link in search result" />
+    <MESSAGE value="Add a link to see all ads in a category" />
+    <MESSAGE value="Install pluralize" />
+    <MESSAGE value="Mockup api route for getting categories" />
+    <MESSAGE value="Add placehold.co as trusted image source" />
+    <MESSAGE value="Add 4/3 aspect ratio" />
+    <MESSAGE value="Add getProduct helper function to generate a fake product" />
+    <MESSAGE value="Update product item in the home page&#10;&#10;- Change aspect ratio to video&#10;- Add sizes prop to image element" />
+    <MESSAGE value="Apply getProduct helper function in all mockup routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Apply getProduct helper function in all mockup routes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
