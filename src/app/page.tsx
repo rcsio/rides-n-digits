@@ -1,6 +1,7 @@
 import EmblaCarousel from "@/ui/embla-carousel";
 import Input from "@/ui/input";
 import Product from "@/ui/product";
+import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -61,7 +62,16 @@ function Category({ name, products }: CategoryProps) {
 
   return (
     <>
-      <div className="px-4 text-xl font-bold leading-none">{name}</div>
+      <div className="mx-4 flex items-center justify-between">
+        <div className="text-xl font-bold leading-none">{name}</div>
+        <Link
+          href={`/categories/${name}`}
+          className="flex items-center gap-x-2"
+        >
+          <div className="leading-none">See all</div>
+          <ArrowRightCircleIcon className="h-4 w-4" />
+        </Link>
+      </div>
       <EmblaCarousel className="mt-4 px-4">
         <ul className="flex gap-x-4">
           {products.map(({ id, name, price, img }) => (
