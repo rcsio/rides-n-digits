@@ -10,12 +10,13 @@ type Props = {
 export default function Product({ name, price, img, imgAlt }: Props) {
   return (
     <div className="grid">
-      <div className="aspect-card relative block">
+      <div className="relative block aspect-video">
         <Image
           src={img}
           alt={imgAlt || name}
           className="rounded-lg object-cover"
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
       <span className="mt-3 font-bold leading-none">{name}</span>
