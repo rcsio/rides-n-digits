@@ -24,10 +24,10 @@ export default async function Home() {
   );
 
   return (
-    <div className="py-4">
+    <>
       <h1 className="sr-only">Trending</h1>
 
-      <form action="/search" className="mx-4">
+      <form action="/search" className="mx-4 mt-4">
         <Input
           label="Search"
           name="q"
@@ -40,15 +40,15 @@ export default async function Home() {
       <section>
         <h2 className="sr-only">Categories</h2>
 
-        <ul className="mt-8">
+        <ul>
           {categories.map((category, i) => (
-            <li key={i} className="mt-8">
+            <li key={i} className="my-8">
               <Category name={category} products={products[i]} />
             </li>
           ))}
         </ul>
       </section>
-    </div>
+    </>
   );
 }
 
