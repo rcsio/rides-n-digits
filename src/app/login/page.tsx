@@ -3,13 +3,14 @@ import Link from "next/link";
 
 export default function Login() {
   return (
-    <div className="mt-16 px-4">
-      <h1 className="grid place-items-center">
-        <span className="text-3xl font-bold">Log in</span>{" "}
-        <span className="text-xl font-bold">for a better experience.</span>
+    <>
+      <h1 className="mx-4 mt-16 text-center">
+        <span className="text-3xl font-bold">Log in</span>
+        <br />
+        <span className="text-xl font-bold"> for a better experience.</span>
       </h1>
 
-      <form action="" className="mt-12 grid gap-y-6">
+      <form action="" className="mx-4 mt-12 space-y-6">
         <Input label="Email" name="email" type="email" required tabIndex={1} />
 
         <div className="relative">
@@ -20,7 +21,7 @@ export default function Login() {
             required
             tabIndex={2}
           />
-          <p className="absolute right-0 top-0 leading-none">
+          <p className="absolute right-0 top-0">
             <Link href="/forgot-password" tabIndex={4} className="underline">
               Forgot<span className="sr-only"> password</span>?
             </Link>
@@ -28,7 +29,7 @@ export default function Login() {
         </div>
 
         <button
-          className="button bg-orange-500 font-bold text-white"
+          className="button w-full bg-orange-500 font-bold text-white"
           tabIndex={3}
         >
           Log in
@@ -41,6 +42,6 @@ export default function Login() {
           Sign up.
         </Link>
       </p>
-    </div>
+    </>
   );
 }
