@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Apply getProduct helper function in all mockup routes">
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Implement sign up functionality">
+      <change afterPath="$PROJECT_DIR$/src/app/login/form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\poste\\dev\\rides-n-digits\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\poste\\dev\\rides-n-digits\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -62,6 +64,7 @@
       <recent name="C:\Users\poste\dev\rides-n-digits\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\poste\dev\rides-n-digits\src\libs" />
       <recent name="C:\Users\poste\dev\rides-n-digits\src\app\login" />
       <recent name="C:\Users\poste\dev\rides-n-digits\src\app\ads\[id]" />
     </key>
@@ -104,111 +107,9 @@
       <workItem from="1711259905570" duration="21025000" />
       <workItem from="1711347846682" duration="99000" />
       <workItem from="1711347973590" duration="16138000" />
-      <workItem from="1711431536445" duration="22255000" />
-    </task>
-    <task id="LOCAL-00005" summary="Fix home page: Input not found">
-      <option name="closed" value="true" />
-      <created>1710831006943</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1710831006943</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Update ide files">
-      <option name="closed" value="true" />
-      <created>1710831037969</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1710831037969</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Move the logo to public folder">
-      <option name="closed" value="true" />
-      <created>1710832181412</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1710832181412</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Install title and @types/title">
-      <option name="closed" value="true" />
-      <created>1710845300869</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1710845300869</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Expose embla options">
-      <option name="closed" value="true" />
-      <created>1710845348300</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1710845348300</updated>
-    </task>
-    <task id="LOCAL-00010" summary="New component class: button">
-      <option name="closed" value="true" />
-      <created>1710845398415</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1710845398415</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Apply button class into nav">
-      <option name="closed" value="true" />
-      <created>1710845449283</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1710845449283</updated>
-    </task>
-    <task id="LOCAL-00012" summary="New hack: scroll to top">
-      <option name="closed" value="true" />
-      <created>1710845477693</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1710845477693</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Remove focus:bg-amber-50">
-      <option name="closed" value="true" />
-      <created>1710845525504</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1710845525504</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Update body element&#10;&#10;- max-w-sm&#10;- mx-auto">
-      <option name="closed" value="true" />
-      <created>1710845919533</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1710845919533</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Update ide files">
-      <option name="closed" value="true" />
-      <created>1710846066964</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1710846066964</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Use vehicle method of faker to generate product name">
-      <option name="closed" value="true" />
-      <created>1710846165681</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1710846165682</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Add optional dots prop to embla carousel">
-      <option name="closed" value="true" />
-      <created>1710855657352</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1710855657352</updated>
+      <workItem from="1711431536445" duration="22439000" />
+      <workItem from="1711516397520" duration="20535000" />
+      <workItem from="1711608940255" duration="18135000" />
     </task>
     <task id="LOCAL-00018" summary="Mockup route for getting a product">
       <option name="closed" value="true" />
@@ -498,7 +399,111 @@
       <option name="project" value="LOCAL" />
       <updated>1711458522702</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Updates for homepage&#10;&#10;- Get categories from api&#10;- Apply title and plural in the category name">
+      <option name="closed" value="true" />
+      <created>1711458704799</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1711458704799</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Update ide files">
+      <option name="closed" value="true" />
+      <created>1711458733063</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1711458733063</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Remove unnecessary classes and tags in the homepage">
+      <option name="closed" value="true" />
+      <created>1711519935460</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1711519935461</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Remove unnecessary classes and tags in the login page">
+      <option name="closed" value="true" />
+      <created>1711525617433</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1711525617433</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Install useSWR and axios">
+      <option name="closed" value="true" />
+      <created>1711609231759</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1711609231759</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Install change-case and react-toastify">
+      <option name="closed" value="true" />
+      <created>1711627333883</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1711627333883</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Do not use nanoid as default id for input">
+      <option name="closed" value="true" />
+      <created>1711627620580</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1711627620580</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Create axios instance">
+      <option name="closed" value="true" />
+      <created>1711627637856</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1711627637856</updated>
+    </task>
+    <task id="LOCAL-00062" summary="New hook: useUser">
+      <option name="closed" value="true" />
+      <created>1711627657027</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1711627657028</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Set up toast container">
+      <option name="closed" value="true" />
+      <created>1711627691381</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1711627691381</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Implement sign up functionality">
+      <option name="closed" value="true" />
+      <created>1711627887879</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1711627887879</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Implement sign up functionality">
+      <option name="closed" value="true" />
+      <created>1711628089396</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1711628089397</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Implement sign up functionality">
+      <option name="closed" value="true" />
+      <created>1711628328435</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1711628328435</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,17 +521,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New component class: input&#10;&#10;Useful for select element" />
-    <MESSAGE value="Add page for placing ads" />
-    <MESSAGE value="Default styles" />
-    <MESSAGE value="Require name prop in input ui" />
-    <MESSAGE value="Update photos ui&#10;&#10;- style file input on hover and on focus&#10;- set tabIndex" />
-    <MESSAGE value="Install nanoid" />
-    <MESSAGE value="New UI: Checkbox" />
-    <MESSAGE value="Require name prop in the textarea ui" />
-    <MESSAGE value="Updates for the placing new ad page&#10;&#10;- Remove leading-none and select-none&#10;- Use checkbox ui&#10;- Pass names" />
-    <MESSAGE value="Pass value to name prop input" />
-    <MESSAGE value="Move the type Product to types.ts file" />
     <MESSAGE value="Install dayjs" />
     <MESSAGE value="Add id and create_at to type Product" />
     <MESSAGE value="Add mock route for searching product" />
@@ -541,7 +535,18 @@
     <MESSAGE value="Add getProduct helper function to generate a fake product" />
     <MESSAGE value="Update product item in the home page&#10;&#10;- Change aspect ratio to video&#10;- Add sizes prop to image element" />
     <MESSAGE value="Apply getProduct helper function in all mockup routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Apply getProduct helper function in all mockup routes" />
+    <MESSAGE value="Updates for homepage&#10;&#10;- Get categories from api&#10;- Apply title and plural in the category name" />
+    <MESSAGE value="Update ide files" />
+    <MESSAGE value="Remove unnecessary classes and tags in the homepage" />
+    <MESSAGE value="Remove unnecessary classes and tags in the login page" />
+    <MESSAGE value="Install useSWR and axios" />
+    <MESSAGE value="Install change-case and react-toastify" />
+    <MESSAGE value="Do not use nanoid as default id for input" />
+    <MESSAGE value="Create axios instance" />
+    <MESSAGE value="New hook: useUser" />
+    <MESSAGE value="Set up toast container" />
+    <MESSAGE value="Implement sign up functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement sign up functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
