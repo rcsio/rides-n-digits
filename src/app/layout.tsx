@@ -2,6 +2,8 @@ import Nav from "@/ui/nav";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 import "./globals.css";
 
@@ -26,6 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </header>
         <main>{children}</main>
         <footer></footer>
+        <ToastContainer />
       </body>
     </html>
   );
