@@ -1,5 +1,5 @@
+import { camelCase } from "change-case";
 import clsx from "clsx";
-import { nanoid } from "nanoid";
 import { InputHTMLAttributes } from "react";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
@@ -8,8 +8,8 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   srLabel?: boolean;
 }
 
-export default function Input({ id, label, srLabel, ...rest }: Props) {
-  const _id = id || nanoid();
+export default function Input({ id, label, name, srLabel, ...rest }: Props) {
+  const _id = id || name || camelCase(label);
 
   return (
     <div className="grid gap-y-1">
@@ -19,7 +19,7 @@ export default function Input({ id, label, srLabel, ...rest }: Props) {
       >
         {label}
       </label>
-      <input {...rest} className="input" id={_id} />
+      <input {...rest} name={name} className="input" id={_id} />
     </div>
   );
 }
