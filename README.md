@@ -19,4 +19,4 @@ By default, Next.js runs on port 3000. If port 3000 is unavailable, please chang
 
 ## Backend Code Repository
 
-[https://github.com/rcsio/rides-n-digits-server](https://github.com/rcsio/rides-n-digits)
+[https://github.com/rcsio/rides-n-digits-server](https://github.com/rcsio/rides-n-digits-server)
