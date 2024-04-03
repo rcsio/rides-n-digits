@@ -37,12 +37,12 @@ export default async function Home() {
         />
       </form>
 
-      <section>
+      <section className="my-7">
         <h2 className="sr-only">Categories</h2>
 
-        <ul>
+        <ul className="space-y-6">
           {categories.map((category, i) => (
-            <li key={i} className="my-8">
+            <li key={i}>
               <Category name={category} products={products[i]} />
             </li>
           ))}

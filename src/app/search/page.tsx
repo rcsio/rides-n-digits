@@ -32,12 +32,12 @@ export default async function Search({ searchParams }: Props) {
         />
       </form>
 
-      <h1 className="mx-4 mt-8 text-xl font-bold leading-none">
+      <h1 className="mx-4 mt-7 text-xl font-bold leading-none">
         Search Result
       </h1>
 
       {products.length > 0 && (
-        <ul className="mt-4 space-y-2">
+        <ul className="my-4 space-y-2">
           {products.map((product) => (
             <li key={product.id}>
               <Product data={product} />
@@ -52,15 +52,19 @@ export default async function Search({ searchParams }: Props) {
 function Product({ data }: { data: Product }) {
   return (
     <div className="flex flex-col-reverse">
-      <dl className="border-b border-b-stone-200 bg-white px-4 py-2">
+      <dl className="border-b border-b-stone-200 bg-white px-4">
         <dt className="sr-only">Name</dt>
-        <dd className="font-bold">{data.name}</dd>
+        <dd className="mt-3 font-bold leading-6">{data.name}</dd>
 
         <dt className="sr-only">Price</dt>
-        <dd className="text-sm">AED {data.price}</dd>
+        <dd className="mt-3 text-sm font-semibold leading-none">
+          AED {data.price}
+        </dd>
 
         <dt className="sr-only">Posted</dt>
-        <dd className="text-sm">Posted {dayjs(data.created_at).fromNow()}</dd>
+        <dd className="mb-3.5 mt-1.5 text-sm leading-none">
+          Posted {dayjs(data.created_at).fromNow()}
+        </dd>
       </dl>
 
       <EmblaCarousel dots={data.images.length} options={{ loop: true }}>
