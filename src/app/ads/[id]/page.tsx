@@ -13,14 +13,18 @@ export default async function Ad({ params }: { params: { id: string } }) {
   return (
     <div className="flex flex-col-reverse">
       <div className="px-4 pb-8">
-        <h1 className="mt-6 text-xl font-bold leading-none">{data.name}</h1>
-        <p className="mt-3 text-sm">{data.description}</p>
+        <h1 className="mt-6 text-xl font-bold leading-6">{data.name}</h1>
+        <p className="mt-4 text-sm">{data.description}</p>
 
         <dl className="mt-8 space-y-4 text-sm leading-none">
           {Object.keys(data.attributes)
             .sort()
             .map((name, i) => (
-              <Row key={i} label={title(name)} value={data.attributes[name]} />
+              <Row
+                key={i}
+                label={title(name)}
+                value={title(data.attributes[name].toString())}
+              />
             ))}
         </dl>
 

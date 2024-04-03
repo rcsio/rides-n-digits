@@ -19,8 +19,8 @@ export default function Product({ name, price, img, imgAlt }: Props) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
-      <span className="mt-3 font-bold leading-none">{name}</span>
-      <span className="mt-2 leading-none">{price}</span>
+      <span className="mt-2 line-clamp-1 font-bold">{name}</span>
+      <span className="line-clamp-1">{price}</span>
     </div>
   );
 }
