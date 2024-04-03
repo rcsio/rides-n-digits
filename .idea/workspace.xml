@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Implement sign up functionality">
-      <change afterPath="$PROJECT_DIR$/src/app/login/form.tsx" afterDir="false" />
+    <list default="true" id="7c8bb991-4010-47ef-8e78-1d70e4a49e78" name="Changes" comment="Add middleware to redirect user based on auth status&#10;&#10;- Protected routes&#10;- Guest only routes">
+      <change afterPath="$PROJECT_DIR$/src/app/global-error.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/hooks/useAuth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/poste/dev/rides-n-digits/public/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/poste/dev/rides-n-digits/src/app/login&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -54,13 +53,14 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\poste\\dev\\rides-n-digits\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\poste\\dev\\rides-n-digits\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\poste\dev\rides-n-digits\src\app\login" />
       <recent name="C:\Users\poste\dev\rides-n-digits\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -109,55 +109,11 @@
       <workItem from="1711347973590" duration="16138000" />
       <workItem from="1711431536445" duration="22439000" />
       <workItem from="1711516397520" duration="20535000" />
-      <workItem from="1711608940255" duration="18135000" />
-    </task>
-    <task id="LOCAL-00018" summary="Mockup route for getting a product">
-      <option name="closed" value="true" />
-      <created>1710855882626</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1710855882626</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Initial commit for product (ad) page">
-      <option name="closed" value="true" />
-      <created>1710855987667</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1710855987667</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Update ide file">
-      <option name="closed" value="true" />
-      <created>1710856005857</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1710856005857</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Set NEXT_PUBLIC_API to 127.0.0.1">
-      <option name="closed" value="true" />
-      <created>1710913862074</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1710913862074</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Mention the default Next.js port number in the README file">
-      <option name="closed" value="true" />
-      <created>1710913957623</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1710913957623</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Loop the carousel in the product page and fix image link">
-      <option name="closed" value="true" />
-      <created>1710914219382</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1710914219382</updated>
+      <workItem from="1711608940255" duration="18412000" />
+      <workItem from="1711863544776" duration="6067000" />
+      <workItem from="1711950700699" duration="49210000" />
+      <workItem from="1712124028880" duration="266000" />
+      <workItem from="1712124411358" duration="2440000" />
     </task>
     <task id="LOCAL-00024" summary="Update embla carousel&#10;&#10;- Move the dots on top of slide&#10;- Change the dots color to white">
       <option name="closed" value="true" />
@@ -503,7 +459,55 @@
       <option name="project" value="LOCAL" />
       <updated>1711628328435</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Implement login functionality">
+      <option name="closed" value="true" />
+      <created>1711628947700</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1711628947700</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Update ide files">
+      <option name="closed" value="true" />
+      <created>1711628979685</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1711628979686</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Update tailwind config&#10;&#10;Add all files within the src directory to the content prop">
+      <option name="closed" value="true" />
+      <created>1712125224952</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1712125224953</updated>
+    </task>
+    <task id="LOCAL-00070" summary="New type: User">
+      <option name="closed" value="true" />
+      <created>1712125239069</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1712125239069</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Update login to use Laravel and server action">
+      <option name="closed" value="true" />
+      <created>1712126410298</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1712126410298</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Add middleware to redirect user based on auth status&#10;&#10;- Protected routes&#10;- Guest only routes">
+      <option name="closed" value="true" />
+      <created>1712126506314</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1712126506314</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,11 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Install dayjs" />
-    <MESSAGE value="Add id and create_at to type Product" />
-    <MESSAGE value="Add mock route for searching product" />
-    <MESSAGE value="Initial commit for search feature" />
-    <MESSAGE value="Only apply border bottom" />
     <MESSAGE value="Fix product link in search result" />
     <MESSAGE value="Add a link to see all ads in a category" />
     <MESSAGE value="Install pluralize" />
@@ -536,7 +535,6 @@
     <MESSAGE value="Update product item in the home page&#10;&#10;- Change aspect ratio to video&#10;- Add sizes prop to image element" />
     <MESSAGE value="Apply getProduct helper function in all mockup routes" />
     <MESSAGE value="Updates for homepage&#10;&#10;- Get categories from api&#10;- Apply title and plural in the category name" />
-    <MESSAGE value="Update ide files" />
     <MESSAGE value="Remove unnecessary classes and tags in the homepage" />
     <MESSAGE value="Remove unnecessary classes and tags in the login page" />
     <MESSAGE value="Install useSWR and axios" />
@@ -546,7 +544,13 @@
     <MESSAGE value="New hook: useUser" />
     <MESSAGE value="Set up toast container" />
     <MESSAGE value="Implement sign up functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement sign up functionality" />
+    <MESSAGE value="Implement login functionality" />
+    <MESSAGE value="Update ide files" />
+    <MESSAGE value="Update tailwind config&#10;&#10;Add all files within the src directory to the content prop" />
+    <MESSAGE value="New type: User" />
+    <MESSAGE value="Update login to use Laravel and server action" />
+    <MESSAGE value="Add middleware to redirect user based on auth status&#10;&#10;- Protected routes&#10;- Guest only routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add middleware to redirect user based on auth status&#10;&#10;- Protected routes&#10;- Guest only routes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
