@@ -1,7 +1,7 @@
+import Product from "@/app/ui/product";
 import { Product as ProductType } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
 import Input from "@/ui/input";
-import Product from "@/ui/product";
 import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import pluralize from "pluralize";
