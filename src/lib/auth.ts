@@ -1,6 +1,7 @@
 import { User } from "@/types";
 import cookie from "cookie";
 import { cookies } from "next/headers";
+import "server-only";
 
 type Register = Pick<User, "email" | "name"> & { password: string };
 type CreateToken = Pick<Register, "email" | "password">;
