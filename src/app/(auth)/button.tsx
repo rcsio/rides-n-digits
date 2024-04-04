@@ -1,15 +1,17 @@
 import { useFormStatus } from "react-dom";
 
-export default function Button() {
+type Props = { children: string; tabIndex: number };
+
+export default function Button({ children, tabIndex }: Props) {
   const { pending } = useFormStatus();
 
   return (
     <button
       disabled={pending}
       className="button w-full bg-orange-500 font-bold text-white disabled:animate-pulse disabled:cursor-wait"
-      tabIndex={3}
+      tabIndex={tabIndex}
     >
-      Log in
+      {children}
     </button>
   );
 }

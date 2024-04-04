@@ -1,11 +1,11 @@
-import Form from "@/app/login/form";
+import Form from "@/app/(auth)/signup/form";
 import Link from "next/link";
 
-export default function Login() {
+export default function Signup() {
   return (
     <>
       <h1 className="mx-4 mt-16 text-center">
-        <span className="text-3xl font-bold">Log in</span>
+        <span className="text-3xl font-bold">Sign up</span>
         <br />
         <span className="text-xl font-bold"> for a better experience.</span>
       </h1>
@@ -13,9 +13,9 @@ export default function Login() {
       <Form />
 
       <p className="mt-6 text-center">
-        Don&apos;t have an account?{" "}
-        <Link href="/signup" className="underline" tabIndex={5}>
-          Sign up.
+        Already have an account?{" "}
+        <Link href="/login" className="underline" tabIndex={5}>
+          Log in.
         </Link>
       </p>
     </>

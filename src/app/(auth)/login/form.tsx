@@ -1,7 +1,7 @@
 "use client";
 
-import { login } from "@/app/login/actions";
-import Button from "@/app/login/button";
+import { login } from "@/app/(auth)/actions";
+import Button from "@/app/(auth)/button";
 import Input from "@/ui/input";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -9,10 +9,10 @@ import { useFormState } from "react-dom";
 import { toast } from "react-toastify";
 
 export default function Form() {
-  const [state, action] = useFormState(login, {});
+  const [state, action] = useFormState(login, null);
 
   useEffect(() => {
-    if (state.message) toast(state.message, { type: "error" });
+    if (state?.message) toast(state.message, { type: "error" });
   }, [state]);
 
   return (
@@ -35,7 +35,7 @@ export default function Form() {
         </p>
       </div>
 
-      <Button />
+      <Button tabIndex={3}>Log in</Button>
     </form>
   );
 }
