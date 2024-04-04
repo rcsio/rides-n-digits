@@ -1,9 +1,12 @@
 import Logo from "@/../public/images/logo.png";
+import { getUser } from "@/lib/auth";
 import { Squares2X2Icon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Nav() {
+export default async function Nav() {
+  const user = await getUser();
+
   return (
     <nav>
       <ul className="flex items-center justify-between border-b border-b-stone-200 bg-white p-4">
@@ -23,15 +26,18 @@ export default function Nav() {
               Place Ad
             </Link>
           </li>
-          <li>
-            <Link
-              href="/"
-              className="inline-flex aspect-square min-h-10 items-center justify-center"
-            >
-              <span className="sr-only">Home</span>
-              <Squares2X2Icon className="h-6 w-6 text-orange-500" />
-            </Link>
-          </li>
+
+          {user && (
+            <li>
+              <Link
+                href="/dashboard"
+                className="inline-flex aspect-square min-h-10 items-center justify-center"
+              >
+                <span className="sr-only">Dashboard</span>
+                <Squares2X2Icon className="h-6 w-6 text-orange-500" />
+              </Link>
+            </li>
+          )}
         </div>
       </ul>
     </nav>
