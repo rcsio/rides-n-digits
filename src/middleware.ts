@@ -1,5 +1,4 @@
-import { User } from "@/types";
-import { cookies } from "next/headers";
+import { getUser } from "@/lib/auth";
 import { NextRequest, NextResponse } from "next/server";
 
 const protectedRoutes = ["/new"];
@@ -20,18 +19,4 @@ export async function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL("/", request.url));
     }
   }
-}
-
-async function getUser(): Promise<User | null> {
-  const token = cookies().get("AUTH_TOKEN")?.value;
-
-  const res = await fetch(`${process.env.BACKEND_URL}/api/user`, {
-    headers: {
-      Accept: "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-  });
-
-  const data = await res.json();
-  return res.ok ? data : null;
 }
