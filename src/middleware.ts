@@ -1,9 +1,9 @@
 import { getUser } from "@/lib/auth";
 import { NextRequest, NextResponse } from "next/server";
 
-const protectedRoutes = ["/new"];
+const protectedRoutes = ["/dashboard", "/new"];
 
-const guestOnlyRoutes = ["/login", "/forgot-password", "/signup"];
+const guestOnlyRoutes = ["/forgot-password", "/login", "/signup"];
 
 export async function middleware(request: NextRequest) {
   const user = await getUser();
