@@ -15,7 +15,11 @@ export default function Nav() {
         </li>
         <div className="flex items-center gap-x-2">
           <li>
-            <Link href="/new" className="button bg-orange-500 text-white">
+            <Link
+              href="/new"
+              prefetch={false}
+              className="button bg-orange-500 text-white"
+            >
               Place Ad
             </Link>
           </li>
