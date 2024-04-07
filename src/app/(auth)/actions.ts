@@ -1,7 +1,7 @@
 "use server";
 
 import { createToken, register } from "@/lib/auth";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function signup(prevState: any, formData: FormData) {
@@ -33,7 +33,18 @@ export async function login(prevState: any, formData: FormData) {
 
   if (res.ok) {
     setAuthCookie(data.token.split("|")[1]);
-    redirect("/");
+
+    const referer = headers().get("referer");
+    if (!referer) redirect("/");
+
+    const url = new URL(referer);
+
+    const next = url.searchParams.get("next");
+    if (!next) redirect(referer);
+
+    url.searchParams.delete("next");
+
+    redirect(next);
   }
 
   return data;
