@@ -10,7 +10,9 @@ export async function middleware(request: NextRequest) {
 
   if (protectedRoutes.includes(request.nextUrl.pathname)) {
     if (!user) {
-      return NextResponse.redirect(new URL("/login", request.url));
+      const url = new URL("/login", request.url);
+      url.searchParams.set("next", request.url);
+      return NextResponse.redirect(url);
     }
   }
 
