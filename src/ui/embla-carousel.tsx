@@ -43,12 +43,7 @@ export default function EmblaCarousel({
               key={i}
               className={clsx(
                 "aspect-square w-2 rounded-full shadow",
-                {
-                  "border border-white": i !== pos,
-                },
-                {
-                  "bg-white": i === pos,
-                },
+                i === pos ? "bg-white" : "border border-white",
               )}
             />
           ))}
