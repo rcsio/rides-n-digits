@@ -1,10 +1,19 @@
+import { Category } from "@/types";
 import Checkbox from "@/ui/checkbox";
 import Input from "@/ui/input";
 import Textarea from "@/ui/textarea";
+import { singular } from "pluralize";
+import title from "title";
 
 import Photos from "./ui/photos";
 
-export default function Advertise() {
+export default async function Advertise() {
+  const url = `${process.env.BACKEND_URL}/api/categories`;
+  const res = await fetch(url, { cache: "no-store" });
+  const categories: Category[] = await res.json();
+
+  categories.sort((a, b) => (a.name > b.name ? 1 : -1));
+
   return (
     <form className="space-y-6 px-4 py-6">
       <h1 className="text-xl font-bold">Place Ad</h1>
@@ -14,9 +23,11 @@ export default function Advertise() {
           Category
         </label>
         <select name="category" id="category" className="input" tabIndex={1}>
-          <option value="">Car</option>
-          <option value="">Motorcycle</option>
-          <option value="">Airplane</option>
+          {categories.map(({ id, name }) => (
+            <option key={id} value={id}>
+              {title(singular(name))}
+            </option>
+          ))}
         </select>
       </div>
 
