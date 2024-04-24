@@ -1,3 +1,4 @@
+import SubmitButton from "@/app/new/ui/submit-button";
 import { Category } from "@/types";
 import Checkbox from "@/ui/checkbox";
 import Input from "@/ui/input";
@@ -58,9 +59,7 @@ export default async function Advertise() {
 
       <Photos />
 
-      <button className="button w-full bg-orange-500 text-white" tabIndex={6}>
-        Post
-      </button>
+      <SubmitButton />
     </form>
   );
 }
