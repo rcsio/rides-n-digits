@@ -1,3 +1,4 @@
+import { createProduct } from "@/app/new/actions";
 import SubmitButton from "@/app/new/ui/submit-button";
 import { Category } from "@/types";
 import Checkbox from "@/ui/checkbox";
@@ -16,14 +17,14 @@ export default async function Advertise() {
   categories.sort((a, b) => (a.name > b.name ? 1 : -1));
 
   return (
-    <form className="space-y-6 px-4 py-6">
+    <form className="space-y-6 px-4 py-6" action={createProduct}>
       <h1 className="text-xl font-bold">Place Ad</h1>
 
       <div className="grid gap-y-1">
         <label htmlFor="category" className="justify-self-start">
           Category
         </label>
-        <select name="category" id="category" className="input" tabIndex={1}>
+        <select name="category_id" id="category" className="input" tabIndex={1}>
           {categories.map(({ id, name }) => (
             <option key={id} value={id}>
               {title(singular(name))}
@@ -53,8 +54,8 @@ export default async function Advertise() {
         tabIndex={4}
       />
 
-      <Checkbox name="price-offers" tabIndex={5}>
-        I want to receive price offers
+      <Checkbox name="open_to_offers" tabIndex={5}>
+        Open to price offers
       </Checkbox>
 
       <Photos />
