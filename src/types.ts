@@ -17,12 +17,18 @@ export type Image = {
 export type Product = {
   id: string;
   attributes: { [key: string]: string };
-  created_at: Date;
+  created_at: string;
+  updated_at: string;
   description: string;
-  images: string[];
+  images: Omit<Image, "created_at" | "updated_at">[];
   name: string;
   price: number;
   user: string;
+  slug: string;
+  active: boolean;
+  open_to_offers: boolean;
+  category_id: number;
+  user_id: number;
 };
 
 export type User = {
