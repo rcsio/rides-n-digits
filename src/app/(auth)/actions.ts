@@ -16,7 +16,7 @@ export async function signup(prevState: any, formData: FormData) {
 
     if (res.ok) {
       const data = await res.json();
-      setAuthCookie(data.token.split("|")[1]);
+      setAuthCookie(data.AUTH_TOKEN.split("|")[1]);
       redirect("/");
     }
   }
@@ -32,7 +32,7 @@ export async function login(prevState: any, formData: FormData) {
   const data = await res.json();
 
   if (res.ok) {
-    setAuthCookie(data.token.split("|")[1]);
+    setAuthCookie(data.AUTH_TOKEN.split("|")[1]);
 
     const referer = headers().get("referer");
     if (!referer) redirect("/");
