@@ -38,7 +38,7 @@ export default function Product({ data }: { data: Product }) {
             <li key={i} className="w-full shrink-0">
               <div className="relative block aspect-card">
                 <Image
-                  src={img}
+                  src={img.name}
                   alt={data.name}
                   fill
                   className="object-cover"
