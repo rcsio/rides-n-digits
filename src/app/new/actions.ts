@@ -2,6 +2,7 @@
 
 import { getUser } from "@/lib/auth";
 import axios from "axios";
+import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -30,6 +31,7 @@ export async function createProduct(formData: FormData) {
 
   if (res.ok) {
     cookies().delete("images");
+    revalidatePath("/dashboard");
     redirect("/dashboard");
   }
 }
