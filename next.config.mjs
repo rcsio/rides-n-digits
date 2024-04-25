@@ -14,4 +14,11 @@ const nextConfig = {
   },
 };
 
+if (process.env.NODE_ENV !== "production") {
+  nextConfig.images.remotePatterns.push({
+    protocol: "http",
+    hostname: "localhost",
+  });
+}
+
 export default nextConfig;
