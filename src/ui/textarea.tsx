@@ -1,5 +1,5 @@
+import { camelCase } from "change-case";
 import clsx from "clsx";
-import { nanoid } from "nanoid";
 import { TextareaHTMLAttributes } from "react";
 
 interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
@@ -8,8 +8,8 @@ interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   srLabel?: boolean;
 }
 
-export default function Textarea({ id, label, srLabel, ...rest }: Props) {
-  const _id = id || nanoid();
+export default function Textarea({ id, label, name, srLabel, ...rest }: Props) {
+  const _id = id || name || camelCase(label);
 
   return (
     <div className="grid gap-y-1">
@@ -19,7 +19,7 @@ export default function Textarea({ id, label, srLabel, ...rest }: Props) {
       >
         {label}
       </label>
-      <textarea {...rest} id={_id}></textarea>
+      <textarea name={name} {...rest} id={_id}></textarea>
     </div>
   );
 }

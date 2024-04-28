@@ -1,4 +1,4 @@
-import { nanoid } from "nanoid";
+import { camelCase } from "change-case";
 import { InputHTMLAttributes } from "react";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
@@ -6,15 +6,21 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
 }
 
-export default function Checkbox({ id, children, ...rest }: Props) {
-  const _id = id || nanoid();
+export default function Checkbox({ id, children, name, ...rest }: Props) {
+  const _id = id || name || camelCase(children);
 
   return (
     <div className="flex items-center gap-x-2">
       <label htmlFor={_id} className="order-2">
         {children}
       </label>
-      <input {...rest} type="checkbox" id={_id} className="order-1" />
+      <input
+        {...rest}
+        name={name}
+        type="checkbox"
+        id={_id}
+        className="order-1"
+      />
     </div>
   );
 }
