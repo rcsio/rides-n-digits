@@ -8,7 +8,6 @@ export default function SubmitButton() {
   return (
     <button
       className="button w-full bg-orange-500 text-white disabled:animate-pulse"
-      tabIndex={6}
       disabled={pending}
       type="submit"
     >

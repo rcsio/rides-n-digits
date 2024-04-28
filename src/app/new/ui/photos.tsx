@@ -29,7 +29,6 @@ export default function Photos() {
           accept=".jpg, .jpeg"
           name="file"
           className="sr-only"
-          tabIndex={6}
           onChange={handleChange}
           required
         />
