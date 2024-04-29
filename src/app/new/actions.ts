@@ -10,17 +10,14 @@ export async function createProduct(formData: FormData) {
   const user = await getUser();
   if (!user) redirect("/login");
 
+  const entries = Object.fromEntries(formData);
+  delete entries.file;
+
+  const open_to_offers = !!formData.get("open_to_offers");
   const images = JSON.parse(cookies().get("images")?.value || "[]");
 
   const res = await fetch(`${process.env.BACKEND_URL}/api/products`, {
-    body: JSON.stringify({
-      category_id: formData.get("category_id"),
-      description: formData.get("description"),
-      name: formData.get("name"),
-      price: formData.get("price"),
-      open_to_offers: !!formData.get("open_to_offers"),
-      images,
-    }),
+    body: JSON.stringify({ ...entries, open_to_offers, images }),
     headers: {
       Accept: "application/json",
       Authorization: `Bearer ${cookies().get("AUTH_TOKEN")?.value}`,
