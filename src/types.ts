@@ -27,7 +27,7 @@ export type Product = {
   slug: string;
   active: boolean;
   open_to_offers: boolean;
-  category_id: number;
+  category_slug: string;
   user_id: number;
 };
 
