@@ -27,9 +27,11 @@ export async function createProduct(formData: FormData) {
   });
 
   if (res.ok) {
+    const { slug } = await res.json();
+
     cookies().delete("images");
     revalidatePath("/dashboard");
-    redirect("/dashboard");
+    redirect(`/new/${slug}/attributes`);
   }
 }
 
