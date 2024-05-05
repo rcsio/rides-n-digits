@@ -47,7 +47,7 @@ export default async function Page({ params: { slug } }: Props) {
 
       <hr />
 
-      <Input label="Price" name="price" type="number" min={1} />
+      <Input label="Price" name="price" type="number" min={1} required />
 
       <Select
         label="Currency"
