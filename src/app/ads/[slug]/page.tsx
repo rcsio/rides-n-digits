@@ -2,13 +2,14 @@ import ScrollToTop from "@/hack/scroll-to-top";
 import { getUser } from "@/lib/auth";
 import { Product } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
+import { noCase } from "change-case";
 import Image from "next/image";
 import Link from "next/link";
 import title from "title";
 
-export default async function Ad({ params }: { params: { id: string } }) {
-  const url = `${process.env.NEXT_PUBLIC_API}/products/${params.id}`;
-  const res = await fetch(url);
+export default async function Ad({ params }: { params: { slug: string } }) {
+  const url = `${process.env.BACKEND_URL}/api/products/${params.slug}`;
+  const res = await fetch(url, { cache: "no-store" });
   const data: Product = await res.json();
 
   const user = await getUser();
@@ -20,13 +21,19 @@ export default async function Ad({ params }: { params: { id: string } }) {
         <p className="mt-4 text-sm">{data.description}</p>
 
         <dl className="mt-8 space-y-4 text-sm leading-none">
-          {Object.keys(data.attributes)
+          {Object.keys(data.attributes || {})
             .sort()
             .map((name, i) => (
               <Row
                 key={i}
-                label={title(name)}
-                value={title(data.attributes[name].toString())}
+                label={title(noCase(name))}
+                value={
+                  name.toLowerCase() === "warranty"
+                    ? data.attributes[name]
+                      ? "Yes"
+                      : "No"
+                    : data.attributes[name]
+                }
               />
             ))}
         </dl>
