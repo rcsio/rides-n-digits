@@ -16,7 +16,7 @@ export default function Select(props: Props) {
   return (
     <div className="grid gap-y-1">
       <label
-        htmlFor="transmission"
+        htmlFor={_id}
         className={clsx("justify-self-start", "sr-only" && srLabel)}
       >
         {label}
