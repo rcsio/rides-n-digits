@@ -15,7 +15,7 @@ export async function createProduct(categorySlug: string, formData: FormData) {
   const entries = {
     ...Object.fromEntries(formData),
     category_slug: categorySlug,
-    attributes: { ...attributes, warranty: Boolean(attributes.warranty) },
+    attributes,
     images,
   };
 

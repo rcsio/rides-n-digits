@@ -8,10 +8,16 @@ export async function tempSaveAttribs(slug: string, formData: FormData) {
   const user = await getUser();
   if (!user) redirect("/login");
 
-  const entries = Object.fromEntries(formData);
+  const entries = Object.fromEntries(formData) as {
+    [key: string]: string | boolean;
+  };
 
   for (const key in entries) {
     if (key.startsWith("$ACTION")) delete entries[key];
+
+    if (key.toLowerCase() === "warranty") {
+      entries[key] = !!entries[key];
+    }
   }
 
   cookies().set({
