@@ -24,8 +24,6 @@ export async function createProduct(categorySlug: string, formData: FormData) {
     method: "POST",
   });
 
-  console.log(await res.json());
-
   if (res.ok) {
     cookies().delete("images");
     cookies().delete("attributes");
