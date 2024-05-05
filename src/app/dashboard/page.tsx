@@ -34,7 +34,7 @@ export default async function Dashboard() {
           <ul className="my-4 space-y-2">
             {paginatedProducts.data.map((product) => (
               <li key={product.id}>
-                <Link href={`/ads/${product.slug}/edit`}>
+                <Link href={`/ads/${product.slug}`}>
                   <ProductUI data={product} />
                 </Link>
               </li>
