@@ -33,7 +33,9 @@ export default async function Ad({ params }: { params: { id: string } }) {
 
         <dl className="mt-8">
           <dt className="sr-only">Price</dt>
-          <dd className="text-xl font-bold">AED {data.price}</dd>
+          <dd className="text-xl font-bold">
+            AED {data.price.toLocaleString()}
+          </dd>
         </dl>
 
         <div className="mt-8 grid gap-y-2">
