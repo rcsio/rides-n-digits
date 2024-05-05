@@ -9,10 +9,15 @@ export async function createProduct(categorySlug: string, formData: FormData) {
   const user = await getUser();
   if (!user) redirect("/login");
 
-  const entries = Object.fromEntries(formData);
+  const attributes = JSON.parse(cookies().get("attributes")?.value || "{}");
+  const images = JSON.parse(cookies().get("images")?.value || "[]");
 
-  entries.category_slug = categorySlug;
-  entries.images = JSON.parse(cookies().get("images")?.value || "[]");
+  const entries = {
+    ...Object.fromEntries(formData),
+    category_slug: categorySlug,
+    attributes: { ...attributes, warranty: Boolean(attributes.warranty) },
+    images,
+  };
 
   const res = await fetch(`${process.env.BACKEND_URL}/api/products`, {
     body: JSON.stringify(entries),
