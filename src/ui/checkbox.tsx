@@ -11,7 +11,7 @@ export default function Checkbox({ id, children, name, ...rest }: Props) {
 
   return (
     <div className="flex items-center gap-x-2">
-      <label htmlFor={_id} className="order-2">
+      <label htmlFor={_id} className="order-2 select-none">
         {children}
       </label>
       <input
