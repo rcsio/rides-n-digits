@@ -1,4 +1,5 @@
 import ScrollToTop from "@/hack/scroll-to-top";
+import { getUser } from "@/lib/auth";
 import { Product } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
 import Image from "next/image";
@@ -9,6 +10,8 @@ export default async function Ad({ params }: { params: { id: string } }) {
   const url = `${process.env.NEXT_PUBLIC_API}/products/${params.id}`;
   const res = await fetch(url);
   const data: Product = await res.json();
+
+  const user = await getUser();
 
   return (
     <div className="flex flex-col-reverse">
@@ -34,18 +37,29 @@ export default async function Ad({ params }: { params: { id: string } }) {
         </dl>
 
         <div className="mt-8 grid gap-y-2">
-          <Link
-            href="tel:+971501231234"
-            className="button bg-orange-500 text-white"
-          >
-            Call Seller
-          </Link>
-          <Link
-            href="https://wa.me/971501231234?text=I%27m%20interested%20in%20your%20ad"
-            className="button border border-blue-500"
-          >
-            WhatsApp
-          </Link>
+          {data.user_id === user?.id ? (
+            <Link
+              href={`/ads/${params.slug}/edit`}
+              className="button bg-orange-500 text-white"
+            >
+              Edit
+            </Link>
+          ) : (
+            <>
+              <Link
+                href="tel:+971501231234"
+                className="button bg-orange-500 text-white"
+              >
+                Call Seller
+              </Link>
+              <Link
+                href="https://wa.me/971501231234?text=I%27m%20interested%20in%20your%20ad"
+                className="button border border-blue-500"
+              >
+                WhatsApp
+              </Link>
+            </>
+          )}
         </div>
       </div>
 
