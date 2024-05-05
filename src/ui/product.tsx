@@ -18,7 +18,7 @@ export default function Product({ data }: { data: Product }) {
         <div className="mt-3">
           <dt className="sr-only">Price</dt>
           <dd className="font-semibold leading-none text-stone-700">
-            AED {data.price}
+            AED {data.price.toLocaleString()}
           </dd>
         </div>
 
