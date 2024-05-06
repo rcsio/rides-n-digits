@@ -1,11 +1,9 @@
 import { includeProps } from "@/app/new/functions";
 import Group from "@/app/new/ui/group";
-import { Category } from "@/types";
+import { getCategories } from "@/functions-server-only";
 
 export default async function Page() {
-  const url = `${process.env.BACKEND_URL}/api/categories`;
-  const res = await fetch(url, { cache: "no-store" });
-  const categories: Category[] = await res.json();
+  const categories = await getCategories();
 
   const rides = categories
     .filter(({ slug }) => {
