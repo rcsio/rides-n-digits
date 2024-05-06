@@ -16,16 +16,20 @@ export type Image = {
 
 export type Product = {
   id: string;
-  attributes: { [key: string]: string };
+  attributes: { [key: string]: any };
   created_at: string;
   updated_at: string;
   description: string;
   images: Omit<Image, "created_at" | "updated_at">[];
   name: string;
   price: number;
+  currency: string;
+  city: string;
+  country: string;
   user: string;
   slug: string;
   active: boolean;
+  warranty: boolean;
   open_to_offers: boolean;
   category_slug: string;
   user_id: number;
