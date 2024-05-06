@@ -16,7 +16,7 @@ export type Image = {
 };
 
 export type Product = {
-  id: string;
+  id: number;
   attributes: { [key: string]: any };
   created_at: string;
   updated_at: string;
