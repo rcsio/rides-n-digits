@@ -1,7 +1,6 @@
 "use server";
 
-import { cleanEntries } from "@/app/ads/[slug]/edit/details/functions";
-import { updateProduct } from "@/functions-server-only";
+import { cleanEntries, updateProduct } from "@/functions-server-only";
 import { revalidateTag } from "next/cache";
 
 export async function update(slug: string, prevState: any, formData: FormData) {

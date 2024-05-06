@@ -48,3 +48,13 @@ export async function getCategories() {
   if (res.ok) return (await res.json()) as Category[];
   throw res;
 }
+
+export function cleanEntries(entries: { [key: string]: any }) {
+  const _entries = entries;
+
+  for (const key in _entries) {
+    if (key.startsWith("$ACTION")) delete _entries[key];
+  }
+
+  return entries;
+}
