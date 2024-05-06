@@ -8,7 +8,8 @@ export type Category = {
 
 export type Image = {
   id: number;
-  name: string;
+  filename: string;
+  href: string;
   product_id: number;
   created_at: string;
   updated_at: string;
