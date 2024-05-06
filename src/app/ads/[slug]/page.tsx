@@ -1,27 +1,27 @@
+import { getProduct } from "@/functions-server-only";
 import ScrollToTop from "@/hack/scroll-to-top";
 import { getUser } from "@/lib/auth";
-import { Product } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
 import { noCase } from "change-case";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import title from "title";
 
-export default async function Ad({ params }: { params: { slug: string } }) {
-  const url = `${process.env.BACKEND_URL}/api/products/${params.slug}`;
-  const res = await fetch(url, { cache: "no-store" });
-  const data: Product = await res.json();
+export default async function Page({ params }: { params: { slug: string } }) {
+  const product = await getProduct(params.slug);
+  if (!product) notFound();
 
   const user = await getUser();
 
   return (
     <div className="flex flex-col-reverse">
       <div className="px-4 pb-8">
-        <h1 className="mt-6 text-xl font-bold leading-6">{data.name}</h1>
-        <p className="mt-4 text-sm">{data.description}</p>
+        <h1 className="mt-6 text-xl font-bold leading-6">{product.name}</h1>
+        <p className="mt-4 text-sm">{product.description}</p>
 
         <dl className="mt-8 space-y-4 text-sm leading-none">
-          {Object.keys(data.attributes || {})
+          {Object.keys(product.attributes || {})
             .sort()
             .map((name, i) => (
               <Row
@@ -29,10 +29,10 @@ export default async function Ad({ params }: { params: { slug: string } }) {
                 label={title(noCase(name))}
                 value={
                   name.toLowerCase() === "warranty"
-                    ? data.attributes[name]
+                    ? product.attributes[name]
                       ? "Yes"
                       : "No"
-                    : data.attributes[name]
+                    : product.attributes[name]
                 }
               />
             ))}
@@ -41,12 +41,12 @@ export default async function Ad({ params }: { params: { slug: string } }) {
         <dl className="mt-8">
           <dt className="sr-only">Price</dt>
           <dd className="text-xl font-bold">
-            AED {data.price.toLocaleString()}
+            AED {product.price.toLocaleString()}
           </dd>
         </dl>
 
         <div className="mt-8 grid gap-y-2">
-          {data.user_id === user?.id ? (
+          {product.user_id === user?.id ? (
             <Link
               href={`/ads/${params.slug}/edit`}
               className="button bg-orange-500 text-white"
@@ -72,15 +72,15 @@ export default async function Ad({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      <EmblaCarousel dots={data.images.length} options={{ loop: true }}>
+      <EmblaCarousel dots={product.images.length} options={{ loop: true }}>
         <ul className="flex">
-          {data.images.map(({ name }, i) => (
+          {product.images.map(({ name }, i) => (
             <li key={i} className="w-full shrink-0">
               <Link href={name} target="_blank">
                 <div className="relative block aspect-card">
                   <Image
                     src={name}
-                    alt={data.name}
+                    alt={product.name}
                     fill
                     className="object-cover"
                   />
