@@ -74,12 +74,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
       <EmblaCarousel dots={product.images.length} options={{ loop: true }}>
         <ul className="flex">
-          {product.images.map(({ name }, i) => (
+          {product.images.map(({ href }, i) => (
             <li key={i} className="w-full shrink-0">
-              <Link href={name} target="_blank">
+              <Link href={href} target="_blank">
                 <div className="relative block aspect-card">
                   <Image
-                    src={name}
+                    src={href}
                     alt={product.name}
                     fill
                     className="object-cover"
