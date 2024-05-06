@@ -1,4 +1,4 @@
-import { Product } from "@/types";
+import { Category, Product } from "@/types";
 import { cookies } from "next/headers";
 import "server-only";
 
@@ -35,4 +35,16 @@ export async function updateProduct(slug: string, data: any) {
     },
     method: "PATCH",
   });
+}
+
+export async function getCategories() {
+  const url = `${process.env.BACKEND_URL}/api/categories`;
+
+  const res = await fetch(url, {
+    headers: { Accept: "application/json" },
+    next: { tags: ["categories"] },
+  });
+
+  if (res.ok) return (await res.json()) as Category[];
+  throw res;
 }
