@@ -35,6 +35,7 @@ export async function createProduct(categorySlug: string, formData: FormData) {
     cookies().delete("images");
     cookies().delete("attributes");
     revalidatePath("/dashboard");
+    revalidatePath("/");
     redirect("/dashboard");
   }
 }
