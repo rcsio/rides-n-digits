@@ -22,7 +22,7 @@ export type Product = {
   created_at: string;
   updated_at: string;
   description: string;
-  images: Omit<Image, "created_at" | "updated_at">[];
+  images: Image[];
   name: string;
   price: number;
   currency: string;
