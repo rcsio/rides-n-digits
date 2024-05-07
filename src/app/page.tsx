@@ -1,27 +1,15 @@
-import Product from "@/app/ui/product";
-import { Product as ProductType } from "@/types";
+import { getCategories } from "@/functions-server-only";
+import { Category, Image, Product, SimplePaginate } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
 import Input from "@/ui/input";
-import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
+import { ArrowRightCircleIcon, MapPinIcon } from "@heroicons/react/16/solid";
+import NextImage from "next/image";
 import Link from "next/link";
 import pluralize from "pluralize";
 import title from "title";
 
-export const dynamic = "force-dynamic";
-
 export default async function Home() {
-  const api = `${process.env.NEXT_PUBLIC_API}`;
-
-  const categoriesRes = await fetch(`${api}/categories`);
-  const categories: string[] = await categoriesRes.json();
-
-  const productsRes = await Promise.all(
-    categories.map((c) => fetch(`${api}/products?category=${c}`)),
-  );
-
-  const products: ProductType[][] = await Promise.all(
-    productsRes.map((res) => res.json()),
-  );
+  const categories = await getCategories();
 
   return (
     <>
@@ -41,10 +29,14 @@ export default async function Home() {
         <h2 className="sr-only">Categories</h2>
 
         <ul className="space-y-6">
-          {categories.map((category, i) => (
-            <li key={i}>
-              <Category name={category} products={products[i]} />
-            </li>
+          {categories.map(({ id, name, products_count, slug }) => (
+            <>
+              {products_count > 0 && (
+                <li key={id}>
+                  <CategoryGroup name={name} slug={slug} />
+                </li>
+              )}
+            </>
           ))}
         </ul>
       </section>
@@ -52,13 +44,21 @@ export default async function Home() {
   );
 }
 
-type CategoryProps = {
-  name: string;
-  products: ProductType[];
+type CategoryGroupProps = {
+  name: Category["name"];
+  slug: Category["slug"];
 };
 
-function Category({ name, products }: CategoryProps) {
-  const currency = "AED";
+async function CategoryGroup({ name, slug }: CategoryGroupProps) {
+  const url = new URL(`${process.env.BACKEND_URL}/api/products`);
+  url.searchParams.set("category", slug);
+  url.searchParams.set("order_by", "created_at");
+  url.searchParams.set("sort", "desc");
+
+  const res = await fetch(url);
+  if (!res.ok) throw res;
+
+  const products: SimplePaginate<Product> = await res.json();
 
   return (
     <>
@@ -76,19 +76,69 @@ function Category({ name, products }: CategoryProps) {
       </div>
       <EmblaCarousel className="mt-4 px-4">
         <ul className="flex gap-x-4">
-          {products.map(({ id, name, price, images }) => (
-            <li key={id} className="shrink-0 basis-11/12">
-              <Link href={`/ads/${id}`}>
-                <Product
-                  name={name}
-                  price={`${currency} ${price}`}
-                  img={images[0]}
-                />
-              </Link>
-            </li>
-          ))}
+          {products.data.map(
+            ({ city, country, currency, id, images, name, price, slug }) => (
+              <li key={id} className="shrink-0 basis-11/12">
+                <Link href={`/ads/${slug}`}>
+                  <ProductCard
+                    image={images[0].href}
+                    imageAlt={name}
+                    location={`${city}, ${country}`}
+                    price={`${currency} ${price.toLocaleString()}`}
+                    title={name}
+                  />
+                </Link>
+              </li>
+            ),
+          )}
         </ul>
       </EmblaCarousel>
     </>
+  );
+}
+
+type ProductCardProps = {
+  image: Image["href"];
+  imageAlt: Product["name"];
+  location: string;
+  title: Product["name"];
+  price: string;
+};
+
+function ProductCard(props: ProductCardProps) {
+  const { image, imageAlt, location, title, price } = props;
+
+  return (
+    <div className="grid">
+      <div className="relative block aspect-video">
+        <NextImage
+          src={image}
+          alt={imageAlt}
+          className="rounded-lg object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          fill
+        />
+      </div>
+
+      <dl>
+        <div>
+          <dt className="sr-only">Name</dt>
+          <dd className="mt-2 line-clamp-1 font-bold">{title}</dd>
+        </div>
+
+        <div>
+          <dt className="sr-only">Price</dt>
+          <dd className="line-clamp-1">{price}</dd>
+        </div>
+
+        <div className="mt-1">
+          <dt className="sr-only">Location</dt>
+          <dd className="flex items-center gap-x-0.5 text-sm">
+            <MapPinIcon className="h-4 w-4 shrink-0 text-stone-700" />
+            <span className="line-clamp-1">{location}</span>
+          </dd>
+        </div>
+      </dl>
+    </div>
   );
 }
