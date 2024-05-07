@@ -53,7 +53,7 @@ export type SimplePaginate<T> = {
   from: number;
   next_page_url: string | null;
   path: string;
-  per_page: number;
+  per_page: number | string;
   prev_page_url: string | null;
   to: number;
 };
