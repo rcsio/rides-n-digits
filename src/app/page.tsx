@@ -1,12 +1,16 @@
 import { getCategories } from "@/functions-server-only";
-import { Category, Image, Product, SimplePaginate } from "@/types";
+import { Category, Product, SimplePaginate } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
 import Input from "@/ui/input";
-import { ArrowRightCircleIcon, MapPinIcon } from "@heroicons/react/16/solid";
-import NextImage from "next/image";
+import ProductCard from "@/ui/product-card";
+import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 import Link from "next/link";
 import pluralize from "pluralize";
 import title from "title";
+
+dayjs.extend(relativeTime);
 
 export default async function Home() {
   const categories = await getCategories();
@@ -76,69 +80,22 @@ async function CategoryGroup({ name, slug }: CategoryGroupProps) {
       </div>
       <EmblaCarousel className="mt-4 px-4">
         <ul className="flex gap-x-4">
-          {products.data.map(
-            ({ city, country, currency, id, images, name, price, slug }) => (
-              <li key={id} className="shrink-0 basis-11/12">
-                <Link href={`/ads/${slug}`}>
-                  <ProductCard
-                    image={images[0].href}
-                    imageAlt={name}
-                    location={`${city}, ${country}`}
-                    price={`${currency} ${price.toLocaleString()}`}
-                    title={name}
-                  />
-                </Link>
-              </li>
-            ),
-          )}
+          {products.data.map((p) => (
+            <li key={p.id} className="shrink-0 basis-11/12">
+              <Link href={`/ads/${slug}`}>
+                <ProductCard
+                  created_at={dayjs(p.created_at).fromNow()}
+                  image={p.images[0].href}
+                  imageAlt={p.name}
+                  location={`${p.city}, ${p.country}`}
+                  price={`${p.currency} ${p.price.toLocaleString()}`}
+                  title={p.name}
+                />
+              </Link>
+            </li>
+          ))}
         </ul>
       </EmblaCarousel>
     </>
-  );
-}
-
-type ProductCardProps = {
-  image: Image["href"];
-  imageAlt: Product["name"];
-  location: string;
-  title: Product["name"];
-  price: string;
-};
-
-function ProductCard(props: ProductCardProps) {
-  const { image, imageAlt, location, title, price } = props;
-
-  return (
-    <div className="grid">
-      <div className="relative block aspect-video">
-        <NextImage
-          src={image}
-          alt={imageAlt}
-          className="rounded-lg object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          fill
-        />
-      </div>
-
-      <dl>
-        <div>
-          <dt className="sr-only">Name</dt>
-          <dd className="mt-2 line-clamp-1 font-bold">{title}</dd>
-        </div>
-
-        <div>
-          <dt className="sr-only">Price</dt>
-          <dd className="line-clamp-1">{price}</dd>
-        </div>
-
-        <div className="mt-1">
-          <dt className="sr-only">Location</dt>
-          <dd className="flex items-center gap-x-0.5 text-sm">
-            <MapPinIcon className="h-4 w-4 shrink-0 text-stone-700" />
-            <span className="line-clamp-1">{location}</span>
-          </dd>
-        </div>
-      </dl>
-    </div>
   );
 }
