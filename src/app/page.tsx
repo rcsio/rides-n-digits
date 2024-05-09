@@ -1,8 +1,8 @@
 import { getCategories } from "@/functions-server-only";
 import { Category, Product, SimplePaginate } from "@/types";
 import EmblaCarousel from "@/ui/embla-carousel";
-import Input from "@/ui/input";
 import ProductCard from "@/ui/product-card";
+import SearchForm from "@/ui/search-form";
 import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -17,22 +17,16 @@ export default async function Home() {
 
   return (
     <>
-      <h1 className="sr-only">Trending</h1>
+      <SearchForm />
 
-      <form action="/search" className="mx-4 mt-4">
-        <Input
-          label="Search"
-          name="q"
-          placeholder="Search for cars, motorcycles, airplanes, bicycles, boats, etc."
-          srLabel
-          type="search"
-        />
-      </form>
+      <h1 className="mx-4 mt-8 text-3xl font-light leading-none tracking-tighter">
+        Latest Ads
+      </h1>
 
-      <section className="my-7">
+      <section className="my-4">
         <h2 className="sr-only">Categories</h2>
 
-        <ul className="space-y-6">
+        <ul className="space-y-8">
           {categories.map(({ id, name, products_count, slug }) => (
             <>
               {products_count > 0 && (
@@ -62,7 +56,7 @@ async function CategoryGroup({ name, slug }: CategoryGroupProps) {
   const res = await fetch(url);
   if (!res.ok) throw res;
 
-  const products: SimplePaginate<Product> = await res.json();
+  const paginatedProducts: SimplePaginate<Product> = await res.json();
 
   return (
     <>
@@ -80,9 +74,9 @@ async function CategoryGroup({ name, slug }: CategoryGroupProps) {
       </div>
       <EmblaCarousel className="mt-4 px-4">
         <ul className="flex gap-x-4">
-          {products.data.map((p) => (
+          {paginatedProducts.data.map((p) => (
             <li key={p.id} className="shrink-0 basis-11/12">
-              <Link href={`/ads/${slug}`}>
+              <Link href={`/ads/${p.slug}`}>
                 <ProductCard
                   created_at={dayjs(p.created_at).fromNow()}
                   image={p.images[0].href}
