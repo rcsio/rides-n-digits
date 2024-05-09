@@ -14,7 +14,7 @@ export default function ProductCardMeta(props: Props) {
 
   return (
     <dl>
-      <div>
+      <div className="mt-0.5">
         <dt className="sr-only">Name</dt>
         <dd className="line-clamp-1 font-bold">{title}</dd>
       </div>
@@ -26,12 +26,10 @@ export default function ProductCardMeta(props: Props) {
 
       <div className="mt-2.5">
         <dt className="sr-only">Location</dt>
-        <dd className="line-clamp-1 text-sm leading-none text-stone-600">
-          {location}
-        </dd>
+        <dd className="line-clamp-1 text-sm text-stone-600">{location}</dd>
       </div>
 
-      <div className="mt-1 line-clamp-1 flex items-center text-sm leading-none text-stone-600">
+      <div className="line-clamp-1 flex items-center text-sm text-stone-600">
         <dt className="mr-[0.15em]">Posted</dt>
         <dd className="ml-[0.15em]">{created_at}</dd>
       </div>
